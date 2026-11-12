@@ -15,7 +15,7 @@ Este projeto foi desenvolvido como parte da atividade acadêmica do curso de Eng
 3. **Pesquisar ação:** permite localizar uma ação pelo código, nome da escola ou tema.
 4. **Atualizar situação:** permite alterar a situação da ação para planejada, realizada ou cancelada.
 5. **Gerar resumo:** apresenta a quantidade de ações por situação e informações sobre os participantes previstos e reais.
-6. **Sair:** encerra o programa.
+0. **Sair:** encerra o programa.
 
 ## Tecnologias utilizadas
 
@@ -34,7 +34,7 @@ Ao iniciar o programa, será apresentado um menu com as opções:
 3. Pesquisar acao
 4. Atualizar situacao
 5. Gerar resumo
-6. Sair
+0. Sair
 
 Escolha uma opcao:
 
