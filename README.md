@@ -1,67 +1,81 @@
+# PSE EM AÇÃO — Programa saúde na escola.
 
-# PSE em Ação
+## Sobre o projeto
 
-Sistema de terminal desenvolvido em linguagem C para apoiar o planejamento e o acompanhamento de ações coletivas do Programa Saúde na Escola (PSE).
+O **PSE EM AÇÃO** é um sistema desenvolvido em C++ para auxiliar no planejamento e acompanhamento de ações de saúde realizadas em ambiente escolar.
 
-## Funcionalidades
+O programa permite cadastrar ações, consultar informações, atualizar situações e gerar um resumo dos dados registrados.
 
-1. Cadastrar ação (código, escola, tema, data, público-alvo, responsável e participantes).
-2. Listar todas as ações.
-3. Pesquisar por código, escola ou tema.
-4. Atualizar situação para: planejada, realizada ou cancelada. Ao marcar como realizada, informa participantes efetivos.
-5. Gerar resumo geral e indicadores de participação.
-6. Encerrar o programa.
+Este projeto foi desenvolvido como parte da atividade acadêmica do curso de Engenharia de Software.
 
-## Requisitos
+## Funcionalidades  
 
-- Compilador C com suporte ao padrão C11 (GCC, MinGW ou equivalente).
-- Terminal ou Prompt de Comando.
+1. **Cadastrar ação:** permite registrar uma nova ação de saúde, informando código, escola, tema, data, público-alvo, responsável e quantidade prevista de participantes.
+2. **Listar ações:** apresenta todas as ações cadastradas.
+3. **Pesquisar ação:** permite localizar uma ação pelo código, nome da escola ou tema.
+4. **Atualizar situação:** permite alterar a situação da ação para planejada, realizada ou cancelada.
+5. **Gerar resumo:** apresenta a quantidade de ações por situação e informações sobre os participantes previstos e reais.
+6. **Sair:** encerra o programa.
 
-## Compilação
+## Tecnologias utilizadas
 
-### Linux
+- Linguagem de programação: C++
+- Compilador: MinGW (g++)
+- Padrão utilizado: C++11
+- Editor recomendado: VSCode/Dev C++
 
-```bash
-gcc -std=c11 -Wall -Wextra -pedantic pse_em_acao.c -o pse_em_acao
-```
+## Como utilizar o sistema
 
-### Windows (MinGW)
+Ao iniciar o programa, será apresentado um menu com as opções:
 
-```bash
-gcc -std=c11 -Wall -Wextra -pedantic pse_em_acao.c -o pse_em_acao.exe
-```
+ PSE EM ACAO
+1. Cadastrar acao
+2. Listar acoes
+3. Pesquisar acao
+4. Atualizar situacao
+5. Gerar resumo
+6. Sair
 
-## Execução
+Escolha uma opcao:
 
-### Linux
+O usuário deve digitar o número correspondente à funcionalidade desejada.
+Exemplo de utilização
 
-```bash
-./pse_em_acao
-```
+    Escolher a opção 1 para cadastrar uma ação.
 
-### Windows
+    Preencher os dados solicitados pelo sistema.
 
-```bash
-pse_em_acao.exe
-```
+    Escolher a opção 2 para visualizar as ações cadastradas.
 
-## Regras e validações
+    Escolher a opção 3 para pesquisar uma ação.
 
-- Armazenamento em memória durante a execução, com limite de 100 ações.
-- Código deve ser positivo e não pode se repetir.
-- Campos textuais são obrigatórios.
-- Quantidades de participantes aceitam apenas números inteiros não negativos.
-- Pesquisas sem resultado e códigos inexistentes recebem mensagens informativas.
-- Ao encerrar o programa, os registros são perdidos, pois esta versão não utiliza banco de dados nem arquivo persistente.
+    Escolher a opção 4 para atualizar a situação de uma ação.
 
-## Integrantes
+    Escolher a opção 5 para visualizar o resumo das ações.
 
-- Kauan Soares Souza — 26008190-2
-- Gabriel Henrique Chatalov — 26005259-2
-- Ilaerte Dos Reis Camargo Vilella — 26010463-2
 
-## Instituição
+O sistema possui algumas validações para evitar erros durante a utilização:
 
-UniCesumar — Universidade Cesumar
+    Não permite cadastrar ações sem preencher os campos de texto.
 
-Projeto acadêmico — 2026.
+    Não permite cadastrar duas ações com o mesmo código.
+
+    Verifica se o código informado existe antes de atualizar uma ação.
+
+    Informa quando nenhuma ação é encontrada na pesquisa.
+
+    Verifica se os valores numéricos foram digitados corretamente.
+
+    Limita o cadastro a 100 ações durante a execução do programa.
+
+## Armazenamento
+
+Os dados são armazenados temporariamente na memória do programa.
+
+Ao encerrar o programa, os dados cadastrados são perdidos. Para manter as informações permanentemente, seria necessário implementar futuramente um sistema de armazenamento em arquivos ou banco de dados.
+Objetivo acadêmico
+
+O sistema busca oferecer uma solução simples para auxiliar no planejamento e acompanhamento de ações de saúde nas escolas.
+Considerações finais
+
+O projeto PSE EM AÇÃO apresenta uma aplicação prática dos conceitos de programação em C++. Por meio de um menu interativo, o usuário consegue cadastrar, consultar, pesquisar, atualizar e visualizar informações sobre ações de saúde escolar.
